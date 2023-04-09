@@ -78,7 +78,8 @@ function themeConfig($form) {
 	$cjCDN = new Typecho_Widget_Helper_Form_Element_Radio('cjCDN', 
 	array('jd' => _t('jsDelivr'),
 	'sc' => _t('Staticfile'),
-	'cf' => _t('CDNJS')),
+	'cf' => _t('CDNJS'),
+	'lc' => _t('本地文件')),
 	'jd', _t('公共静态资源来源'), _t('默认jsDelivr，若JS文件异常，可尝试切换来源'));
 	$form->addInput($cjCDN);
 
@@ -555,4 +556,8 @@ function themeFields($layout) {
 	0 => _t('关闭')),
 	0, _t('文章目录'), _t('默认关闭，启用则会在文章内显示“文章目录”（若文章内无任何标题，则不显示目录），需要在“控制台-设置外观-文章目录”启用“使用文章内设定”后，方可生效'));
 	$layout->addItem($catalog);
+
+	$summary = new Typecho_Widget_Helper_Form_Element_Text('summary', NULL, NULL, _t('文章摘要'), _t('在这里填入文章摘要，html格式'));
+	$summary->input->setAttribute('class', 'w-100');
+	$layout->addItem($summary);
 }

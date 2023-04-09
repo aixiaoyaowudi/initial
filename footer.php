@@ -34,12 +34,23 @@
 </ul>
 </div>
 <?php endif; if ($this->options->PjaxOption || $this->options->AjaxLoad): ?>
-<script src="//<?php if ($this->options->cjCDN == 'cf'): ?>cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js<?php elseif ($this->options->cjCDN == 'sc'): ?>cdn.staticfile.org/jquery/2.1.4/jquery.min.js<?php else: ?>cdn.jsdelivr.net/npm/jquery@2.1.4/dist/jquery.min.js<?php endif; ?>"></script>
+<script src="<?php if ($this->options->cjCDN == 'cf'): ?>//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js<?php elseif ($this->options->cjCDN == 'sc'): ?>//cdn.staticfile.org/jquery/2.1.4/jquery.min.js<?php elseif ($this->options->cjCDN == 'lc'): ?>/usr/themes/initial/local/jquery.min.js<?php else: ?>//cdn.jsdelivr.net/npm/jquery@2.1.4/dist/jquery.min.js<?php endif; ?>"></script>
 <?php endif; if ($this->options->PjaxOption): ?>
-<script src="//<?php if ($this->options->cjCDN == 'cf'): ?>cdnjs.cloudflare.com/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js<?php elseif ($this->options->cjCDN == 'sc'): ?>cdn.staticfile.org/jquery.pjax/2.0.1/jquery.pjax.min.js<?php else: ?>cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js<?php endif; ?>"></script>
+<script src="<?php if ($this->options->cjCDN == 'cf'): ?>//cdnjs.cloudflare.com/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js<?php elseif ($this->options->cjCDN == 'sc'): ?>//cdn.staticfile.org/jquery.pjax/2.0.1/jquery.pjax.min.js<?php elseif ($this->options->cjCDN == 'lc'): ?>/usr/themes/initial/local/jquery.pjax.min.js<?php else: ?>//cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js<?php endif; ?>"></script>
 <?php endif; if ($this->options->Highlight):?>
-<script src="//<?php if ($this->options->cjCDN == 'cf'): ?>cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js<?php elseif ($this->options->cjCDN == 'sc'): ?>cdn.staticfile.org/highlight.js/10.2.0/highlight.min.js<?php else: ?>cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.0/build/highlight.min.js<?php endif; ?>"></script>
+<script src="<?php if ($this->options->cjCDN == 'cf'): ?>//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js<?php elseif ($this->options->cjCDN == 'sc'): ?>//cdn.staticfile.org/highlight.js/10.2.0/highlight.min.js<?php elseif($this->options->cjCDN == 'lc'): ?>/usr/themes/initial/local/highlight.min.js<?php else: ?>//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.0/build/highlight.min.js<?php endif; ?>"></script>
 <?php endif; ?>
+<script src="https://cdn.bootcdn.net/ajax/libs/require.js/2.3.6/require.min.js"></script>
+<script type="text/javascript">
+window.xiaoyaowudi_config = {
+    content_class_name : 'post-content',
+    code : {
+        font_size : '11px'
+    },
+    language_prefix : 'lang'
+}
+</script>
+<script type="text/javascript" src="/usr/themes/initial/res/script/base.js"></script>
 <script src="<?php cjUrl('main.min.js') ?>"></script>
 <?php $this->footer(); ?>
 <?php if ($this->options->CustomContent): $this->options->CustomContent(); ?>
