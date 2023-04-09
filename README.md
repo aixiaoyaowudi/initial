@@ -1,10 +1,10 @@
-# Typecho主题 - Initial 简约而不简单（v2.5.5）
+# Typecho主题 - Initial 简约而不简单（v2.5.5）modified by xiaoyaowudi
 
 ![主题封面](https://www.offodd.com/usr/uploads/2018/09/111355748.png)
 
 主题命名为**Initial**，意为“**初**”，专注于文字，算是极极极简风格吧，简约而不简单，希望你能喜欢这种很小众的风格。
 
-主题预览：[https://www.offodd.com/](https://www.offodd.com/)
+主题预览：[https://www.xiaoyaowudi.com/](https://www.xiaoyaowudi.com/)
 
 ## 功能与特点
 

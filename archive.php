@@ -30,7 +30,7 @@ $this->need('header.php'); ?>
 <?php if (postThumb($this)): ?>
 <p class="thumb"><?php echo postThumb($this); ?></p>
 <?php endif; ?>
-<p><?php $this->excerpt(200, ''); ?></p>
+<?php echo $this->fields->summary ?>
 <?php endif; if (!$this->options->OneCOL): ?>
 <p class="more"><a href="<?php $this->permalink() ?>" title="<?php $this->title() ?>">- 阅读全文 -</a></p>
 <?php endif; ?>
